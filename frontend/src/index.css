@@ -64,7 +64,7 @@ BOOK CONTAINER
   opacity: 1;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 4em;
   -webkit-transition: opacity .1s;
   transition: opacity .1s;
@@ -107,7 +107,7 @@ BOOK SHOW POPUP
 #popup {
   width: 75%;
   height: 60%;
-  margin: 0% 13%;
+  margin: -1% 12%;
   display: none;
   justify-items: center;
   align-items: center;
@@ -139,5 +139,5 @@ BOOK SHOW POPUP
 #popup.activate {
   opacity: 1;
   display: grid;
-  height: 90%;
+  height: 60%;
 }

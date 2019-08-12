@@ -21,9 +21,12 @@ $('#book-container').on('click', '.book-container-item', (e) => {
 
 //exit popup handler
 $("#popup").click(e => {
-  $("#popup").toggleClass("activate")
-  $("#popup-content").remove()
-  $("#book-container").toggleClass("hide")
+  //protects against book anchor tag click - waits for redirect
+  if(e.target.tagName !== "A"){
+    $("#popup").toggleClass("activate")
+    $("#popup-content").remove()
+    $("#book-container").toggleClass("hide")
+  }
 });
 
 /**************
