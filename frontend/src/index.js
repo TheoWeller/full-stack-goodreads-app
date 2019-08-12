@@ -23,6 +23,7 @@ $('#book-container').on('click', '.book-container-item', (e) => {
 $("#popup").click(e => {
   $("#popup").toggleClass("activate")
   $("#popup-content").remove()
+  $("#book-container").toggleClass("hide")
 });
 
 /**************
@@ -53,7 +54,7 @@ const appendBookToPopup = (book) => {
     `
   );
   $("#popup").toggleClass("activate")
-  $("#book-container").toggleClass("hide")
+  // $("#book-container").toggleClass("hide")
 };
 
 const newSearchHandler = () => {
@@ -70,10 +71,10 @@ const fetchHandler = query => {
 };
 
 const showBookFetchHandler = bookId => {
+  $("#book-container").toggleClass("hide")
   fetch(`http:localhost:3000/api/v1/book/${bookId}`)
   .then(response => response.json())
   .then(data => {
-    $("#book-container").toggleClass("hide")
     appendBookToPopup(data);
   });
 };

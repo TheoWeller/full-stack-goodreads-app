@@ -93,7 +93,7 @@ BOOK CONTAINER
 }
 
 #book-container.hide {
-  opacity: 0;
+  display: none;
 }
 
 .author {
@@ -106,7 +106,7 @@ BOOK SHOW POPUP
 ***************/
 #popup {
   width: 75%;
-  height: 70%;
+  height: 60%;
   margin: 0% 13%;
   display: none;
   justify-items: center;
@@ -139,4 +139,5 @@ BOOK SHOW POPUP
 #popup.activate {
   opacity: 1;
   display: grid;
+  height: 90%;
 }
