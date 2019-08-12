@@ -1,0 +1,142 @@
+body {
+  width: 100%;
+}
+
+#header {
+  text-align: center;
+  border-style: solid;
+  border-image: linear-gradient(to left, rgba(0, 0, 0, .1) 1%, rgba(0, 0, 0, 1.1) 50%, rgba(0, 0, 0, .1) 100%) 2% 16 10% 17/1px 0 1px 0 stretch;
+  margin-bottom: 2%;
+}
+
+/**************
+SEARCH CONTAINER
+***************/
+#search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+
+#search-container input{
+  width: 40%;
+  height: 100%;
+  font-size: 15pt;
+  border: 0;
+  background-color: rgb(248, 248, 248);
+  text-align: center;
+  box-shadow: inset 8px 8px 14px -10px rgba(0,0,0,0.35);
+}
+
+#search-container input:focus{
+  box-shadow: 8px 8px 14px -10px rgba(0,0,0,0.35);
+}
+
+#search-container select {
+  height: 56px;
+  width: 100px;
+  font-size: 15pt;
+  border-radius: 0px;
+}
+
+#search-container button {
+  padding: 20px;
+  border-style: none;
+  background-color: rgb(248, 248, 248);
+  box-shadow:inset 0px 8px 14px -10px rgba(0,0,0,0.35);
+  height: 104%;
+  }
+
+#search-container button:hover {
+  background-color: #8cb1ff;
+  box-shadow: none;
+}
+
+#search-container select option {
+  height: 50px;
+}
+
+/**************
+BOOK CONTAINER
+***************/
+#book-container {
+  opacity: 1;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4em;
+  -webkit-transition: opacity .1s;
+  transition: opacity .1s;
+}
+
+.book-container-item {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 350px;
+  height: 300px;
+  opacity: 1;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 8px 8px 14px -10px rgba(0,0,0,0.35);
+}
+
+.book-container-item:hover{
+  box-shadow: 8px 8px 14px -10px rgba(140,177,255,0.35);
+}
+
+#book-container ul span{
+  text-align: center;
+  font-size: 1.3em;
+  padding: 2px;
+}
+
+#book-container.hide {
+  opacity: 0;
+}
+
+.author {
+  border-style: solid;
+  border-image: linear-gradient(to left, rgba(0, 0, 0, .1) 1%, rgba(0, 0, 0, 1.1) 50%, rgba(0, 0, 0, .1) 100%) 2% 16 10% 17/1px 0 1px 0 stretch;
+}
+
+/**************
+BOOK SHOW POPUP
+***************/
+#popup {
+  width: 75%;
+  height: 70%;
+  margin: 0% 13%;
+  display: none;
+  justify-items: center;
+  align-items: center;
+  position: fixed;
+  opacity: 0;
+  z-index: 0;
+  background-color: white;
+  overflow: scroll;
+  box-shadow: 8px 8px 14px -10px rgba(0,0,0,0.35);
+  -webkit-transition: opacity .1s;
+  transition: opacity .1s;
+}
+
+#popup-content span {
+  margin-bottom: 2%;
+  padding: 3%;
+}
+
+#popup-content img {
+  margin-bottom: 2%;
+}
+
+#popup-content {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+#popup.activate {
+  opacity: 1;
+  display: grid;
+}
