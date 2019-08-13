@@ -1,12 +1,22 @@
+html, body {
+  overflow-x: hidden;
+}
 body {
-  width: 100%;
+  position: relative
+  margin: 0;
 }
 
 #header {
   text-align: center;
+  font-size: 7vw;
   border-style: solid;
   border-image: linear-gradient(to left, rgba(0, 0, 0, .1) 1%, rgba(0, 0, 0, 1.1) 50%, rgba(0, 0, 0, .1) 100%) 2% 16 10% 17/1px 0 1px 0 stretch;
   margin-bottom: 2%;
+}
+
+#app-container {
+  width: 100vw;
+  height: 100vh;
 }
 
 /**************
@@ -64,7 +74,7 @@ BOOK CONTAINER
   opacity: 1;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4em;
   -webkit-transition: opacity .1s;
   transition: opacity .1s;
@@ -106,7 +116,7 @@ BOOK SHOW POPUP
 ***************/
 #popup {
   width: 75%;
-  height: 60%;
+  height: 80%;
   margin: -1% 12%;
   display: none;
   justify-items: center;
@@ -124,6 +134,7 @@ BOOK SHOW POPUP
 #popup-content span {
   margin-bottom: 2%;
   padding: 3%;
+  font-size: 3vw;
 }
 
 #popup-content img {
@@ -139,5 +150,5 @@ BOOK SHOW POPUP
 #popup.activate {
   opacity: 1;
   display: grid;
-  height: 60%;
+  height: 90%;
 }

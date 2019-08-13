@@ -1,5 +1,5 @@
 $( document ).ready(() => {
-$("#book-container").toggleClass("hide")
+// $("#book-container").toggleClass("hide")
 let prevQuery;
 /**************
 EVENT HANDLERS
@@ -46,6 +46,7 @@ const appendBooks = (books) => {
       `
     );
   });
+  // $("#book-container").toggleClass("hide");
 };
 
 const appendBookToPopup = (book) => {
