@@ -1,15 +1,13 @@
 $( document ).ready(() => {
-// $("#book-container").toggleClass("hide")
 let prevQuery;
 /**************
 EVENT HANDLERS
 ***************/
 //Search button event listener
 $("#search-container button").click(e => {
-  prevQuery = $("#search").val()
-  newSearchHandler()
-  // prevQuery === $("#search").val() && $(".book-container-item").length >= 0 ? newSearchHandler() : null;
-  fetchHandler(prevQuery)
+  prevQuery = $("#search").val();
+  newSearchHandler();
+  fetchHandler(prevQuery);
 });
 
 //Book container event listener
@@ -28,7 +26,7 @@ $("#popup").click(e => {
     $("#popup").toggleClass("activate")
     $("#popup-content").remove()
     $("#book-container").toggleClass("hide")
-  }
+  };
 });
 
 /**************
@@ -42,11 +40,9 @@ const appendBooks = (books) => {
           <img src=${book.image_url}>
           <span>${book.title}</span>
           <span class="author">Author: ${book.author.name}</span>
-        </ul>
-      `
+        </ul>`
     );
   });
-  // $("#book-container").toggleClass("hide");
 };
 
 const appendBookToPopup = (book) => {
@@ -56,15 +52,13 @@ const appendBookToPopup = (book) => {
       <span><a href=${book.url}>${book.title}</a></span>
       <span class="author">Author: ${book.author}</span>
       <span>${book.description}</span>
-    </div>
-    `
+    </div>`
   );
-  $("#popup").toggleClass("activate")
+  $("#popup").toggleClass("activate");
 };
 
 const newSearchHandler = () => {
   $(".book-container-item").length >= 0 && $(".book-container-item").remove() && $("#book-container").toggleClass( "hide" );
-
 };
 
 const fetchHandler = query => {
@@ -72,7 +66,7 @@ const fetchHandler = query => {
   .then(response => response.json())
   .then(data => {
     appendBooks(data);
-    $("#book-container").toggleClass("hide")
+    $("#book-container").toggleClass("hide");
   });
 };
 
@@ -84,5 +78,4 @@ const showBookFetchHandler = bookId => {
     appendBookToPopup(data);
   });
 };
-
 });//end document ready
