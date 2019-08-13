@@ -1,13 +1,15 @@
 $( document ).ready(() => {
 $("#book-container").toggleClass("hide")
+let prevQuery;
 /**************
 EVENT HANDLERS
 ***************/
 //Search button event listener
 $("#search-container button").click(e => {
+  prevQuery = $("#search").val()
   newSearchHandler()
-  const query = $("#search").val()
-  fetchHandler(query)
+  // prevQuery === $("#search").val() && $(".book-container-item").length >= 0 ? newSearchHandler() : null;
+  fetchHandler(prevQuery)
 });
 
 //Book container event listener
@@ -57,11 +59,11 @@ const appendBookToPopup = (book) => {
     `
   );
   $("#popup").toggleClass("activate")
-  // $("#book-container").toggleClass("hide")
 };
 
 const newSearchHandler = () => {
-  $(".book-container-item").length >= 0 && $(".book-container-item").remove();
+  $(".book-container-item").length >= 0 && $(".book-container-item").remove() && $("#book-container").toggleClass( "hide" );
+
 };
 
 const fetchHandler = query => {
