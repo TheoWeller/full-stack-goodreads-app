@@ -9,4 +9,4 @@ A simple and responsive book/author search that queries Goodreads public api.
 + Leveraged jQuery to switch between CSS classes and listen for DOM events.
 
 Note:
-With this app I took the oppertunity to lean more heavily on CSS (as opposited to Javascript) to manipulate and style the elements on the DOM. Any notes or general feedback is welcomed as I would like to continue exploring CSS implementations and frontend best practices.
+With this app I took the oppertunity to lean more heavily on CSS (as opposed to Javascript) to manipulate and style the elements on the DOM. Any notes or general feedback is welcomed as I would like to continue exploring CSS implementations and frontend best practices.
